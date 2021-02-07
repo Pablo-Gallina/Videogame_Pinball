@@ -16,7 +16,7 @@ extents = Vector2( 1, 1 )
 
 [node name="border_left" type="StaticBody2D" parent="."]
 
-[node name="col_border_left" type="CollisionShape2D" parent="border_left"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border_left"]
 position = Vector2( -4, 256 )
 scale = Vector2( 4, 256 )
 shape = SubResource( 1 )

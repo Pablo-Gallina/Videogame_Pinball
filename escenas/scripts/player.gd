@@ -19,8 +19,15 @@ func _ready():
 	
 func _physics_process(delta):
 	if Input.is_action_pressed("mover_derecha"):
-		position.x += speed
+		#position.x += speed #Movimiento sin colision
+		
+		#Movimiento con colision          en x se mueve segun speed y en y no se mueve 0
+		var mouvement : Vector2 = Vector2(speed,0)
+		move_and_collide(mouvement)
 		
 	if Input.is_action_pressed("mover_izquierda"):
-		position.x -= speed
+		#position.x -= speed
+		var mouvement : Vector2 = Vector2(-speed,0)
+		move_and_collide(mouvement)
+		
 
